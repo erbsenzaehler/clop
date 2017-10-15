@@ -17,7 +17,7 @@ include $(DEPEND)
 ifeq ($(OSTYPE),cygwin)
  LDFLAGS := $(LDFLAGS) -lboost_thread-gcc-mt -lboost_filesystem-gcc-mt
 else
- LDFLAGS := $(LDFLAGS) -lboost_thread-mt -lboost_filesystem-mt
+ LDFLAGS := $(LDFLAGS) -lboost_thread -lboost_system
 endif
 
 OBJECTS := $(OBJECTS) $(patsubst %.o, $(OUTDIR)/%.o,\
