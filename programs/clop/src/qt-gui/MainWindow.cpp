@@ -213,8 +213,8 @@ void MainWindow::loadFile(const QString &fileName)
  ui->matrixTable->setHorizontalHeaderLabels(slNames);
  ui->matrixTable->setVerticalHeaderLabels(slNames); 
  ui->matrixTable->resizeRowsToContents();
- ui->matrixTable->verticalHeader()->setResizeMode(QHeaderView::Fixed);
- ui->matrixTable->horizontalHeader()->setResizeMode(QHeaderView::Fixed);
+ ui->matrixTable->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+ ui->matrixTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
 
  //
  // Setup eigenvectors display
@@ -223,8 +223,8 @@ void MainWindow::loadFile(const QString &fileName)
  ui->eigenTable->setColumnCount(paramcol.GetSize());
  ui->eigenTable->setVerticalHeaderLabels(QStringList() << "Eigenvalue" << "" << slNames);
  ui->eigenTable->resizeRowsToContents();
- ui->eigenTable->verticalHeader()->setResizeMode(QHeaderView::Fixed);
- ui->eigenTable->horizontalHeader()->setResizeMode(QHeaderView::Fixed);
+ ui->eigenTable->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+ ui->eigenTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
  for (int i = paramcol.GetSize(); --i >= 0;)
  {
   QTableWidgetItem *item = new QTableWidgetItem();

@@ -4,6 +4,7 @@
 TARGET = clop-gui
 TEMPLATE = app
 VERSION = 0.0.9
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 INCLUDEPATH += ../../src/real \
     ../../src/qt-gui \
     ../../src/math \
@@ -77,7 +78,7 @@ FORMS += ../../src/qt-gui/MainWindow.ui \
     ../../src/qt-gui/AboutDialog.ui
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 DEFINES += restrict=__restrict__
-QMAKE_CXXFLAGS_WARN_ON = -Wall \
+QMAKE_CXXFLAGS_WARN_ON = -std=c++11 -Wall \
     -pedantic \
     -Wextra \
     -Wno-unused-parameter \
