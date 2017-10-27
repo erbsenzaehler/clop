@@ -1,0 +1,12 @@
+To use chess.tcl you must have a tcl interpreter on your system.
+
+Also, at the top of chess.tcl you will need to make modfications which
+are liberally commented.  Primarily this is where you set up the path
+to the programs and the level.
+
+IMPORTANT: The script accesses the opening book called autobook.txt to
+provide variety based on the seed passed by CLOP - it must be in the
+same directory CLOP is run from.
+
+If you have any difficulties or issues contact dailey.don@gmail.com
+
